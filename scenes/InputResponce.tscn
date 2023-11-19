@@ -1,21 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://cv7iym1252lh"]
+[gd_scene load_steps=4 format=3 uid="uid://cv7iym1252lh"]
 
 [ext_resource type="Script" path="res://Scripts/InputResponce.gd" id="1_fphff"]
-[ext_resource type="FontFile" uid="uid://c3dwdsa6ke5fi" path="res://fonts/ttf/IBMPlexMono-Regular.ttf" id="1_odp6p"]
+[ext_resource type="PackedScene" uid="uid://dl81heau6bsm1" path="res://scenes/InputHistory.tscn" id="2_5ndo5"]
+[ext_resource type="PackedScene" uid="uid://b5iywf5gy6aub" path="res://scenes/Responce.tscn" id="3_64lxc"]
 
 [node name="InputResponce" type="VBoxContainer"]
 theme_override_constants/separation = 0
 script = ExtResource("1_fphff")
 
-[node name="InputHistory" type="Label" parent="."]
+[node name="InputHistory" parent="." instance=ExtResource("2_5ndo5")]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.662745, 0.662745, 0.662745, 1)
-theme_override_fonts/font = ExtResource("1_odp6p")
-theme_override_font_sizes/font_size = 24
-text = " > This is what the user typed"
 
-[node name="Responce" type="Label" parent="."]
+[node name="Responce" parent="." instance=ExtResource("3_64lxc")]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_odp6p")
-theme_override_font_sizes/font_size = 28
-text = "This is what the game will give back"
