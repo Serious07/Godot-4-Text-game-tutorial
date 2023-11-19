@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://cv7iym1252lh"]
+
+[ext_resource type="Script" path="res://Scripts/InputResponce.gd" id="1_fphff"]
+[ext_resource type="FontFile" uid="uid://c3dwdsa6ke5fi" path="res://fonts/ttf/IBMPlexMono-Regular.ttf" id="1_odp6p"]
+
+[node name="InputResponce" type="VBoxContainer"]
+theme_override_constants/separation = 0
+script = ExtResource("1_fphff")
+
+[node name="InputHistory" type="Label" parent="."]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.662745, 0.662745, 0.662745, 1)
+theme_override_fonts/font = ExtResource("1_odp6p")
+theme_override_font_sizes/font_size = 24
+text = " > This is what the user typed"
+
+[node name="Responce" type="Label" parent="."]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_odp6p")
+theme_override_font_sizes/font_size = 28
+text = "This is what the game will give back"
