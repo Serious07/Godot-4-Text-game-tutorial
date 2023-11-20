@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://dv6l6oirocx8c"]
+[gd_scene load_steps=12 format=3 uid="uid://dv6l6oirocx8c"]
 
 [ext_resource type="FontFile" uid="uid://c3dwdsa6ke5fi" path="res://fonts/ttf/IBMPlexMono-Regular.ttf" id="1_26y8w"]
 [ext_resource type="Script" path="res://Scripts/Game.gd" id="1_gpxjs"]
 [ext_resource type="Script" path="res://Scripts/Input.gd" id="1_sd4wn"]
+[ext_resource type="PackedScene" uid="uid://3lwuodij5n6d" path="res://scenes/Room.tscn" id="3_ob04f"]
 [ext_resource type="Script" path="res://Scripts/CommandProcessor.gd" id="4_fut5f"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_56d4h"]
@@ -31,6 +32,16 @@ script = ExtResource("1_gpxjs")
 
 [node name="CommandProcessor" type="Node" parent="."]
 script = ExtResource("4_fut5f")
+
+[node name="RoomManager" type="Node" parent="."]
+
+[node name="HouseRoom" parent="RoomManager" instance=ExtResource("3_ob04f")]
+offset_left = 44.0
+offset_top = -370.0
+offset_right = 294.0
+offset_bottom = -170.0
+room_name = "a house"
+room_description = "a random house that you don't recognize."
 
 [node name="Background" type="PanelContainer" parent="."]
 layout_mode = 1
